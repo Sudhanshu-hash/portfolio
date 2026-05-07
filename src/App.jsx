@@ -127,21 +127,21 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      <section className="animate-fadeIn min-h-[82vh] grid md:grid-cols-2 items-center px-6 md:px-20 pt-20 pb-10 relative overflow-hidden">
+      <section className="animate-fadeIn min-h-[82vh] grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-20 pt-28 md:pt-20 pb-10 relative overflow-hidden gap-10">
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-black to-zinc-950" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full animate-pulse" />
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/20 blur-3xl rounded-full animate-pulse" />
 
-        <div className="relative z-10 max-w-2xl">
+        <div className="relative z-10 max-w-2xl order-2 md:order-1">
           <p className="text-zinc-400 text-base mb-3">Hello, I’m</p>
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
             Sudhanshu Joshi
           </h1>
-          <h2 className="text-xl md:text-3xl mt-4 text-zinc-300 font-medium">
+          <h2 className="text-lg md:text-3xl mt-4 text-zinc-300 font-medium leading-relaxed">
             Frontend Developer · Data Analyst · AI Enthusiast
           </h2>
           <div className="mt-8 overflow-hidden">
-            <div className="flex gap-4 whitespace-nowrap animate-[scroll_18s_linear_infinite]">
+            <div className="flex gap-3 whitespace-nowrap animate-[scroll_18s_linear_infinite]">
 
               {[
                 "Python",
@@ -154,7 +154,7 @@ export default function Portfolio() {
               ].map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 rounded-full border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl text-sm text-zinc-300"
+                  className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border-zinc-800 bg-zinc-950/70 backdrop-blur-xl text-sm text-zinc-300"
                 >
                   {tech}
                 </span>
@@ -164,8 +164,8 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="relative z-10 hidden md:flex justify-center items-center">
-          <div className="relative w-[320px] h-[390px] rounded-[32px] border border-zinc-800 bg-zinc-950/70 backdrop-blur-2xl overflow-hidden shadow-2xl">
+        <div className="relative z-10 flex justify-center items-center order-1 md:order-2 mb-10 md:mb-0">
+          <div className="relative w-[230px] h-[300px] md:w-[320px] md:h-[390px] rounded-[32px] border border-zinc-800 bg-zinc-950/70 backdrop-blur-2xl overflow-hidden shadow-2xl">
 
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
@@ -176,7 +176,7 @@ export default function Portfolio() {
 
             {/* Profile Image */}
             <div className="relative z-10 flex justify-center pt-8">
-              <div className="w-52 h-52 rounded-3xl overflow-hidden border border-zinc-700 shadow-xl">
+              <div className="w-40 h-40 md:w-52 md:h-52 rounded-3xl overflow-hidden border border-zinc-700 shadow-xl">
                 <img
                   src="/images/profile/profile.jpg"
                   alt="Profile"
@@ -302,9 +302,9 @@ export default function Portfolio() {
                 {Object.entries(skillGroups).map(([group, items]) => (
                   <div
                     key={group}
-                    className="grid grid-cols-[120px_1fr] gap-4 items-start"
+                    className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-3 md:gap-4 items-start"
                   >
-                    <h4 className="text-zinc-500 text-sm font-medium pt-1">
+                    <h4 className="text-zinc-400 text-sm font-medium pt-1">
                       {group}
                     </h4>
 
@@ -479,7 +479,7 @@ export default function Portfolio() {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="h-52 w-full object-cover object-top brightness-90 contrast-110 transition duration-500 group-hover:scale-105"
+                        className="h-44 md:h-52 w-full object-cover object-top brightness-90 contrast-110 transition duration-500 group-hover:scale-105"
                       />
 
                       {/* Overlay */}
@@ -586,7 +586,7 @@ export default function Portfolio() {
             {/* Email */}
             <a
               href="mailto:sudhanshujoshi6009@gmail.com"
-              className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-6 hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition duration-300"
+              className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-5 md:p-6 hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition duration-300"
             >
               <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-5">
                 ✉
@@ -606,7 +606,7 @@ export default function Portfolio() {
               href="https://github.com/Sudhanshu-hash"
               target="_blank"
               rel="noreferrer"
-              className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-6 hover:border-purple-500/50 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.12)] transition duration-300"
+              className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-5 md:p-6 hover:border-purple-500/50 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.12)] transition duration-300"
             >
               <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-xl mb-5">
                 ⌘
@@ -626,7 +626,7 @@ export default function Portfolio() {
               href="https://linkedin.com/in/sudhanshu-joshi15"
               target="_blank"
               rel="noreferrer"
-              className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-6 hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition duration-300"
+              className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-5 md:p-6 hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition duration-300"
             >
               <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-5">
                 in
@@ -642,7 +642,7 @@ export default function Portfolio() {
             </a>
 
             {/* Location */}
-            <div className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-6 hover:border-zinc-600 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition duration-300">
+            <div className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-5 md:p-6 hover:border-zinc-600 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.12)] transition duration-300">
               <div className="w-12 h-12 rounded-2xl bg-zinc-800/50 border border-zinc-700 flex items-center justify-center text-zinc-300 text-xl mb-5">
                 ⌖
               </div>
