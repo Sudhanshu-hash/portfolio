@@ -134,10 +134,10 @@ export default function Portfolio() {
 
         <div className="relative z-10 max-w-2xl order-2 md:order-1">
           <p className="text-zinc-400 text-base mb-3">Hello, I’m</p>
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
             Sudhanshu Joshi
           </h1>
-          <h2 className="text-lg md:text-3xl mt-4 text-zinc-300 font-medium leading-relaxed">
+          <h2 className="text-base sm:text-lg md:text-3xl mt-4 text-zinc-300 font-medium leading-relaxed max-w-xl">
             Frontend Developer · Data Analyst · AI Enthusiast
           </h2>
           <div className="mt-8 overflow-hidden">
@@ -165,7 +165,7 @@ export default function Portfolio() {
         </div>
 
         <div className="relative z-10 flex justify-center items-center order-1 md:order-2 mb-10 md:mb-0">
-          <div className="relative w-[230px] h-[300px] md:w-[320px] md:h-[390px] rounded-[32px] border border-zinc-800 bg-zinc-950/70 backdrop-blur-2xl overflow-hidden shadow-2xl">
+          <div className="relative w-[230px] h-[360px] md:h-[390px] md:w-[260px] md:w-[320px] md:h-[390px] rounded-[32px] border border-zinc-800 bg-zinc-950/70 backdrop-blur-2xl overflow-hidden shadow-2xl">
 
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
@@ -322,27 +322,41 @@ export default function Portfolio() {
                 ))}
 
               </div>
+{/* Bottom Stats */}
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
 
-              {/* Bottom Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-10">
+  <div className="rounded-2xl border border-zinc-800 bg-black/40 p-5 md:p-4 text-center min-h-[140px] flex flex-col justify-center">
+    <h4 className="text-xl md:text-2xl font-bold mb-2">
+      Frontend
+    </h4>
 
-                <div className="rounded-2xl border border-zinc-800 bg-black/40 p-4 text-center">
-                  <h4 className="text-xl font-bold mb-1">Frontend</h4>
-                  <p className="text-xs text-zinc-500">React · UI/UX</p>
-                </div>
+    <p className="text-sm text-zinc-500 leading-relaxed">
+      HTML · CSS · JavaScript · UI/UX
+    </p>
+  </div>
 
-                <div className="rounded-2xl border border-zinc-800 bg-black/40 p-4 text-center">
-                  <h4 className="text-xl font-bold mb-1">Analytics</h4>
-                  <p className="text-xs text-zinc-500">Power BI · SQL</p>
-                </div>
+  <div className="rounded-2xl border border-zinc-800 bg-black/40 p-5 md:p-4 text-center min-h-[140px] flex flex-col justify-center">
+    <h4 className="text-xl md:text-2xl font-bold mb-2">
+      Analytics
+    </h4>
 
-                <div className="rounded-2xl border border-zinc-800 bg-black/40 p-4 text-center">
-                  <h4 className="text-xl font-bold mb-1">AI/ML</h4>
-                  <p className="text-xs text-zinc-500">Scikit-learn · AI</p>
-                </div>
+    <p className="text-sm text-zinc-500 leading-relaxed">
+      Power BI · SQL · Dashboards
+    </p>
+  </div>
 
-              </div>
+  <div className="rounded-2xl border border-zinc-800 bg-black/40 p-5 md:p-4 text-center min-h-[140px] flex flex-col justify-center">
+    <h4 className="text-xl md:text-2xl font-bold mb-2">
+      AI / ML
+    </h4>
 
+    <p className="text-sm text-zinc-500 leading-relaxed">
+      Scikit-learn · AI Models
+    </p>
+  </div>
+
+</div>
+              
             </div>
           </div>
         </div>
@@ -363,7 +377,7 @@ export default function Portfolio() {
               </div>
 
               {/* Heading */}
-              <h3 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
+              <h3 className= "text-xl md:text-3xl md:text-4xl font-bold leading-tight mb-4">
                 Explore projects across
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   {" "}multiple technical domains.
